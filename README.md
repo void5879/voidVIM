@@ -131,7 +131,6 @@ Built around `snacks.nvim` and `mini.nvim` for a cohesive, lightweight experienc
 - **snacks.nvim** - Swiss army knife plugin suite
 - **mini.nvim** - Collection of minimal, independent plugins
 - **lazy.nvim** - Modern plugin manager
-- **telescope.nvim** - Fuzzy finder
 - **nvim-lspconfig** - LSP configurations
 - **nvim-cmp** - Autocompletion
 - **conform.nvim** - Formatting
