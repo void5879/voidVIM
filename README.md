@@ -41,7 +41,7 @@ rm -rf assets/
 nvim
 ```
 
-**Prerequisites:** `nvim 0.11+`, Nerd Font, `git`, `ripgrep`, `fzf`
+**Prerequisites:** `nvim 0.11+`, Nerd Font, `git`, `ripgrep`, `fzf`, `fd`, `unzip`, `lazygit`, `ghostscript`, `tectonic`, `mermaid-cli`
 
 ---
 
@@ -55,6 +55,12 @@ home.packages = with pkgs; [
   git
   ripgrep
   fzf
+  unzip
+  fd
+  lazygit
+  ghostscript
+  tectonic
+  mermaid-cli
   
   # LSP Servers
   lua-language-server              # lua_ls
@@ -102,29 +108,13 @@ Mason plugins can stay in the config for the UI, but set `ensure_installed = {}`
 
 ---
 
-## ⚠️ MANUAL SETUP REQUIRED
+## ⚠️ ATTENTION: MANUAL SETUP REQUIRED
 
-### For Non-NixOS Users:
-
-**1. Install LSP Servers via Mason**  
-On first launch, run `:Mason` and install the language servers you need, or let Mason auto-install them.
-
-**2. Change Java (JDTLS) Paths**  
-If you're using Java, edit `lua/plugins/jdtls.lua` and update the hardcoded paths in the `cmd = { ... }` table to match your system.
-
-### For NixOS Users:
-
-**1. JDTLS Configuration**  
-The `jdtls` Nix package provides a wrapper that handles paths automatically. Your config should use:
-```lua
-cmd = { 'jdtls', '-data', workspace_dir }
-```
-No hardcoded paths needed!
-
-### For Everyone:
-
-**2. Change Colorscheme**  
-The active theme is set in `lua/plugins/colorscheme.lua`. By default, `github_dark_high_contrast` is enabled. Edit the file to switch themes.
+After cloning, you must do the following:
+**1. Change Java (JDTLS) Paths**  
+The file lua/plugins/jdtls.lua contains hardcoded paths to my local Java runtime and JDTLS executables. You must edit this file and update the paths in the cmd = { ... } table to match your own system's locations.
+**2. Change Colorscheme Manually**  
+The active theme is set in lua/plugins/colorscheme.lua. By default, github_dark_high_contrast is enabled. To change it, you must edit that file, comment out the active vim.cmd("colorscheme ...") line, and uncomment the one you want (e.g., kanagawa).
 
 ---
 
