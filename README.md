@@ -45,7 +45,7 @@ nvim
 
 ---
 
-## 🐧 NixOS Users
+## ❄️ N I X O S  U S E R S
 
 **This config is designed for NixOS/Home Manager!** Instead of using Mason to install LSP servers and tools, add them to your `home.nix`:
 ```nix
@@ -108,7 +108,7 @@ Mason plugins can stay in the config for the UI, but set `ensure_installed = {}`
 
 ---
 
-## ⚠️ ATTENTION: MANUAL SETUP REQUIRED
+## ⚠️ A T T E N T I O N
 
 After cloning, you must do the following:
 
@@ -120,13 +120,13 @@ The active theme is set in lua/plugins/colorscheme.lua. By default, github_dark_
 
 ---
 
-## 🏗️ Built With
+## 🏗️ B U I L T  W I T H
 
 Built around `snacks.nvim` and `mini.nvim` for a cohesive, lightweight experience.
 
 ---
 
-## 📦 Core Plugins
+## 📦 C O R E  P L U G I N S
 
 - **snacks.nvim** - Swiss army knife plugin suite
 - **mini.nvim** - Collection of minimal, independent plugins
