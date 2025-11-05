@@ -59,6 +59,11 @@ return {
 				local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 				-- Create a unique data directory for this project
 				local workspace_dir = "/home/<YOURSYSTEM>/Projects/jdtls_data/" .. project_name
+				-- Experimenting Stuff...
+				-- local java_bin = vim.env.JAVA_HOME .. "/bin/java"
+				-- local jdtls_path = vim.fn.trim(vim.fn.system("readlink -f $(which jdtls)"))
+				-- local jdtls_dir = vim.fn.fnamemodify(jdtls_path, ":h:h") .. "/share/java"
+				-- local launcher_jar = vim.fn.glob(jdtls_dir .. "/plugins/org.eclipse.equinox.launcher_*.jar")
 
 				-- ═════════════════════════════════════════════════════════
 				--                    JDTLS SERVER CONFIG
@@ -67,6 +72,7 @@ return {
 					-- The command to execute to start the JDTLS server
 					cmd = {
 						-- 1. Java Executable Path (HARDCODED)
+						-- java_bin,
 						"/usr/lib/jvm/java-25-openjdk/bin/java",
 
 						-- 2. JVM Options
@@ -84,10 +90,12 @@ return {
 
 						-- 3. JDTLS Launcher JAR Path (HARDCODED)
 						"-jar",
+						-- launcher_jar,
 						"/home/<YOURSYSTEM>/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.7.100.v20251014-1222.jar",
 
 						-- 4. JDTLS Configuration Path (HARDCODED)
 						"-configuration",
+						-- jdtls_dir .. "/config_linux",
 						"/home/<YOURSYSTEM>/.local/share/nvim/mason/packages/jdtls/config_linux",
 
 						-- 5. Workspace Data Path (Dynamic)
