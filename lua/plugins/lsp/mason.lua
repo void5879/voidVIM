@@ -70,20 +70,20 @@ return {
 
 			-- List of LSP servers for Mason to automatically install
 			ensure_installed = {
-				"lua_ls",
-				"ts_ls", -- currently using a ts plugin
-				"html",
-				"cssls",
-				"tailwindcss",
+				-- "lua_ls",
+				-- "ts_ls", -- currently using a ts plugin
+				-- "html",
+				-- "cssls",
+				-- "tailwindcss",
 				-- "gopls",
 				-- "angularls",
-				"emmet_ls",
-				"emmet_language_server",
+				-- "emmet_ls",
+				-- "emmet_language_server",
 				-- "eslint",
-				"marksman", -- For Markdown
-				"pyright", -- For Python
-				"clangd", -- For C/C++
-				"rust_analyzer", -- For Rust
+				-- "marksman", -- For Markdown
+				-- "pyright", -- For Python
+				-- "clangd", -- For C/C++
+				-- "rust_analyzer", -- For Rust
 			},
 		})
 
@@ -93,11 +93,11 @@ return {
 		mason_tool_installer.setup({
 			-- List of non-LSP tools (formatters, linters) to install
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python import formatter
-				"pylint", -- python linter
-				"clang-format", -- c/c++ formatter
+				-- "prettier", -- prettier formatter
+				-- "stylua", -- lua formatter
+				-- "isort", -- python import formatter
+				-- "pylint", -- python linter
+				-- "clang-format", -- c/c++ formatter
 				-- "eslint_d",
 				-- "denols",
 				-- { 'eslint_d', version = '13.1.2' },
