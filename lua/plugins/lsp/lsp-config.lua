@@ -1,4 +1,4 @@
---[[
+ --[[
 ================================================================================
                         LSPCONFIG (LANGUAGE SERVER) CONFIGURATION
 ================================================================================
@@ -267,6 +267,22 @@ return {
 			--   },
 			-- })
 			-- vim.lsp.enable("gopls")
+
+			-- 8. Nix
+			vim.lsp.config["nil_ls"] = {
+				cmd = { "nil" },
+				filetypes = { "nix" },
+				root_markers = { "flake.nix", "default.nix", ".git" },
+				capabilities = caps,
+				settings = {
+					["nil"] = {
+						formatting = {
+							command = { "nixpkgs-fmt" }, -- or "alejandra" if you prefer
+						},
+					},
+				},
+			}
+			vim.lsp.enable("nil_ls")
 		end,
 	},
 }
