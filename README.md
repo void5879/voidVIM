@@ -84,7 +84,7 @@ home.packages = with pkgs; [
   isort                            # python imports
   nodePackages.prettier            # js/ts/html/css
   biome                            # fast js/ts/json (prettier alternative)
-  # rustfmt comes with rustc
+  rustfmt                          # rust formatter
   # clang-format comes with clang-tools
   
   # Linters
